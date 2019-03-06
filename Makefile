@@ -3,10 +3,6 @@ include ${ENV_FILE}
 export $(shell sed 's/=.*//' ${ENV_FILE})
 export PIPENV_DOTENV_LOCATION=${ENV_FILE}
 
-oc_build_head:
-	git archive --format=tar.gz HEAD > build/HEAD.tar.gz
-        oc start-build systems-clustering --from-archive build/HEAD.tar.gz --follow
-
 test:
      	pipenv run pytest
 
@@ -18,9 +14,9 @@ oc_mlflow_job:
 		--env DAY_2=${DAY_2} \
                 --env CEPH_KEY=${CEPH_KEY} \
                 --env CEPH_SECRET=${CEPH_SECRET} \
-                --env CEPH_ENDPOINT=${CEPH_ENDPOINT} \
+                --env CEPH_HOST=${CEPH_HOST} \
                 --env CEPH_BUCKET=${CEPH_BUCKET} \
-		--env PCA_DIMENSIONS=${PCA_COMPONENTS} \
+		--env PCA_DIMENSIONS=${PCA_DIMENSIONS} \
 		--env K_CLUSTERS=${K_CLUSTERS} \
 		--env MLFLOW_EXPERIMENT_NAME=${MLFLOW_EXPERIMENT_NAME} \
 		--env MLFLOW_TRACKING_URI=${MLFLOW_TRACKING_URI}
