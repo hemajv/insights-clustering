@@ -6,7 +6,7 @@ export PIPENV_DOTENV_LOCATION=${ENV_FILE}
 test:
      	pipenv run pytest
 
-oc_mlflow_job:
+oc_run_experiment:
 	oc new-app mlflow-experiment-job --param APP_IMAGE_URI=your-application-image-name\
                 --param LIMIT_CPU=4 \
                 --param LIMIT_MEM=16G \
