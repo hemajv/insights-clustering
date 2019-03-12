@@ -17,8 +17,8 @@ import pyarrow.parquet as pq
 import mlflow
 import mlflow.sklearn
 
-import matplotlib.pyplot as plt
-import pylab as pl
+#import matplotlib.pyplot as plt
+#import pylab as pl
 
 
 
@@ -171,30 +171,30 @@ def run_clustering():
         centers_1 = kmeans_1.cluster_centers_
         centers_2 = kmeans_2.cluster_centers_
         
-        plt.scatter(data_transformed_1[:, 0], data_transformed_1[:, 1], c=labels_1)
-        plt.scatter(centers_1[:,0], centers_1[:,1], c='black', s=200, alpha=0.5)
-        plt.show()
+        #plt.scatter(data_transformed_1[:, 0], data_transformed_1[:, 1], c=labels_1)
+        #plt.scatter(centers_1[:,0], centers_1[:,1], c='black', s=200, alpha=0.5)
+        #plt.show()
         
-        plt.scatter(data_transformed_2[:, 0], data_transformed_2[:, 1], c=labels_2)
-        plt.scatter(centers_2[:,0], centers_2[:,1], c='black', s=200, alpha=0.5)
-        plt.show()
+        #plt.scatter(data_transformed_2[:, 0], data_transformed_2[:, 1], c=labels_2)
+        #plt.scatter(centers_2[:,0], centers_2[:,1], c='black', s=200, alpha=0.5)
+        #plt.show()
         
-        plt.scatter(data_transformed_1[:, 0], data_transformed_1[:, 2], c=labels_1)
-        plt.scatter(centers_1[:,0], centers_1[:,2], c='black', s=200, alpha=0.5)
-        plt.show()
+        #plt.scatter(data_transformed_1[:, 0], data_transformed_1[:, 2], c=labels_1)
+        #plt.scatter(centers_1[:,0], centers_1[:,2], c='black', s=200, alpha=0.5)
+        #plt.show()
         
-        plt.scatter(data_transformed_2[:, 0], data_transformed_2[:, 2], c=labels_2)
-        plt.scatter(centers_2[:,0], centers_2[:,2], c='black', s=200, alpha=0.5)
-        plt.show()
+        #plt.scatter(data_transformed_2[:, 0], data_transformed_2[:, 2], c=labels_2)
+        #plt.scatter(centers_2[:,0], centers_2[:,2], c='black', s=200, alpha=0.5)
+        #plt.show()
      
-        plt.scatter(data_transformed_1[:, 1], data_transformed_1[:, 2], c=labels_1)
-        plt.scatter(centers_1[:,1], centers_1[:,2], c='black', s=200, alpha=0.5)
-        plt.show()
+        #plt.scatter(data_transformed_1[:, 1], data_transformed_1[:, 2], c=labels_1)
+        #plt.scatter(centers_1[:,1], centers_1[:,2], c='black', s=200, alpha=0.5)
+        #plt.show()
         
         
-        plt.scatter(data_transformed_2[:, 1], data_transformed_2[:, 2], c=labels_1)
-        plt.scatter(centers_2[:,1], centers_2[:,2], c='black', s=200, alpha=0.5)
-        plt.show()        
+        #plt.scatter(data_transformed_2[:, 1], data_transformed_2[:, 2], c=labels_1)
+        #plt.scatter(centers_2[:,1], centers_2[:,2], c='black', s=200, alpha=0.5)
+        #plt.show()        
         
         #Performance evaluation metrics
         silhouette_score_1 = metrics.silhouette_score(data_transformed_1, labels_1, metric='euclidean')
