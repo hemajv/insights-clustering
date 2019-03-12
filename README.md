@@ -1,4 +1,4 @@
-### Insights Clustering with MLflow
+## Insights Clustering with MLflow
 
 This is an application which demonstrates how to run the clustering model using MLflow on Openshift.
 
