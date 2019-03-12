@@ -1,6 +1,6 @@
 ### Insights Clustering with MLflow
 
-This is a demo application which demonstrates how to run MLflow jobs on Openshift.
+This is an application which demonstrates how to run the clustering model using MLflow on Openshift.
 
 ## Running on OpenShift
 This is a two stage process:
